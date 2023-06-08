@@ -1,2 +1,2 @@
 # mojo
-- mojo daily
+- This is an attempt to learn mojo every single day.
