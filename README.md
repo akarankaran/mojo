@@ -1,1 +1,2 @@
 # mojo
+- mojo daily
