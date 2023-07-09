@@ -46,10 +46,16 @@ print(myf(5, 'karan'))
 def myf(a:Int, b:Int):
     return a + b
 
-print(myf(5, 10))
+print(myf(5, 10)) #output 15
 
 # works too
 def myf(a:Int, b:Float32):
     return a + b
 
 print(myf(5, 10)) # output 15.0
+
+# not working
+def myf(a:Float32, b:Float64):
+    return a + b
+
+print(myf(5, 10)) # two different types of float does not work i guess.
