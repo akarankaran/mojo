@@ -41,3 +41,15 @@ def myf(a:Int, b:StringLiteral):
     return b + StringLiteral(a)
 
 print(myf(5, 'karan'))
+
+# works ofcourse
+def myf(a:Int, b:Int):
+    return a + b
+
+print(myf(5, 10))
+
+# works too
+def myf(a:Int, b:Float32):
+    return a + b
+
+print(myf(5, 10)) # output 15.0
