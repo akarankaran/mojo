@@ -1,0 +1,42 @@
+## to_do_app obviously😂
+# tried doing it from youtube. No clue as to why it did not worked. OOPS is yet to learn.🫠
+
+from Vektor import InlinedFixedVector
+
+struct TodoList[size: Int]:
+    var tasks: InlinedFixedVector[size, StringLiteral]
+    
+    fn __init__(inout self, capacity: Int):
+        self.tasks.__init(capacity)
+    
+    fn addTask(inout self, description: StringLiteral, isCompleted: Bool = False):
+        if isCompleted:
+            print("Completed Task: ", description)
+        else:
+            self.tasks.append(description)
+            print("Added Task: ", description)
+
+    fn completeTask(inout self, description: StringLiteral):
+        let tasksLength = self.tasks.__len__()
+        var tempPT: InlinedFixedVector[size, StringLiteral] = InlinedFixedVector[size, StringLiteral] (tasksLength)
+    
+        for x in range(0, tasksLength):
+            let task= self.tasks.__getitem__(x)
+            if task != description:
+                tempPT.append(task)
+            else:
+                print("Completed Task: ", task)
+        self.tasks.clear()
+        self.tasks = tempPT
+        
+    fn displayTasks (inout self):
+        let tasksLength = self.tasks.__len__()
+        if tasksLength > 0:
+            print("\nDisplaying Tasks")
+            for x in range(0, tasksLength):
+                let task = self.tasks.__getitem__(x)
+                print (x + 1, "-", "Task: ", task)
+                
+
+var todo = TodoList[10](20)
+todo.addTask("working fine")
