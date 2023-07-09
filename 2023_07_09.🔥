@@ -59,3 +59,15 @@ def myf(a:Float32, b:Float64):
     return a + b
 
 print(myf(5, 10)) # two different types of float does not work i guess.
+
+# works
+def myf(a:Bool, b:Bool):
+    return a == b
+
+print(myf(True, False))
+
+# not work, would have worked in python
+def myf(a:Bool, b:Bool):
+    return a == b
+
+print(myf(1, 0))
