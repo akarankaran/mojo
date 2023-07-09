@@ -1,0 +1,43 @@
+### let and var experiments
+## there is one variable, you can not assign that variable to something else
+# variable will not change its memory address after its assigned.
+# working
+let a = 5
+c = 5
+
+# not working
+let a = 5
+a = c 
+
+
+### Type checking
+# working
+a = 5
+let a: Int = 50
+
+# not working
+a = 5
+let a: String = '50'
+
+# working
+a = 5
+let a: StringLiteral = 'ab'
+
+# works
+let a:Int = 5
+let a = 5
+a = 5
+let a:StringLiteral = '5'
+var a:Int = 5
+
+# not working
+a:StringLiteral = '5'
+a = '5'
+a:Int = '5'
+a:Int = 5
+
+# not able to convert to StringLiteral
+def myf(a:Int, b:StringLiteral):
+    return b + StringLiteral(a)
+
+print(myf(5, 'karan'))
