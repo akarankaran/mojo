@@ -1,0 +1,13 @@
+# exploring mapping time_took
+from Time import now
+start = now()
+
+for i in range(10000000):
+    i = i * 50 // 2 
+    i = i * 4
+
+stop = now()
+
+
+time_took = stop - start
+print(time_took)
