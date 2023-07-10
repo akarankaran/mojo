@@ -11,3 +11,5 @@ stop = now()
 
 time_took = stop - start
 print(time_took)
+
+# did some more, could not get anything more than 200 while doing stop - start
